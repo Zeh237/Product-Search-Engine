@@ -1,0 +1,22 @@
+# Environments
+.idea/
+__pycache__
+.env
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis

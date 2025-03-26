@@ -56,3 +56,14 @@ def search():
     products, total = search_service.search_products(search_term, latitude, longitude, sort_by, limit, page_num, country, radius_km, min_price, max_price, category_id, locale)
 
     return make_response(jsonify({"products": products, "total": total}), 200)
+
+@api.route("/suggest_search_terms", methods=["POST"])
+def suggest():
+    data = request.get_json()
+    if not data or not data.get("query"):
+        return make_response(jsonify({"error": "query is required"}), 400)
+
+    search_term = data.get("query")
+    suggestions = search_service.product_suggestions(search_term)
+
+    return make_response(jsonify({"suggestions": suggestions}), 200)
