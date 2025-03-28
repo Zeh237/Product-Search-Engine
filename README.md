@@ -40,7 +40,7 @@ Follow these steps to set up the project:
 
 6. **Database Setup**
     *   Make sure you have a database running, and that you have created the database for the project(mysql database).
-    *   in the root folder of this project, you will see the products and category tables as csv. import them into your database using workbench or any other tool of your choice
+    *   in the root folder of this project, you will see the database sql file called search_db. import it into your database using workbench or any other tool of your choice
 
 7.  **Run the Application:**
      flask run
